@@ -6,6 +6,12 @@ module Wikisnakker
       @snak = snak
     end
 
+    alias_method :as_json, :value
+
+    def to_json
+      value.to_json
+    end
+
     # https://www.wikidata.org/wiki/Special:ListDatatypes
     # https://www.wikidata.org/wiki/Help:Data_type
     def value

@@ -47,7 +47,7 @@ module Wikisnakker
         format: 'json'
       }
       url = 'https://www.wikidata.org/w/api.php?' + URI.encode_www_form(query)
-      json = Yajl::Parser.parse(open(url), symbolize_keys: true)
+      json = Yajl::Parser.parse(URI.open(url), symbolize_keys: true)
       save_wikibase_entityids(json)
       json
     end
