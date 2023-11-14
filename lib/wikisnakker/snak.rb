@@ -54,7 +54,5 @@ module Wikisnakker
         ''
       end
     end
-
-    alias_method :as_json, :value
   end
 end
