@@ -6,8 +6,6 @@ module Wikisnakker
       @snak = snak
     end
 
-    alias_method :as_json, :value
-
     def to_json
       value.to_json
     end
@@ -56,5 +54,7 @@ module Wikisnakker
         ''
       end
     end
+
+    alias_method :as_json, :value
   end
 end
